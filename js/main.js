@@ -1,5 +1,23 @@
 // Please, hack me!
 
+// Config
+
+// Colors to detect Red, Green, Blue
+// Use the RGB values of the color you want to track
+
+var cR = 240;
+var cG = 92;
+var cB = 160;
+
+// Color offset  (+/-)
+// A bigger offset will detect a bigger range of colors
+var cOffset = 40;
+
+// Detect only blocks bigger than this weight
+// The script scans the video frames seeking for color blocks using the previous RGB config and offset,
+// this value sets the minimum weight of the block to be tracked
+var sizeOffset = 200;
+
 //Main object
 var processor = {
 
@@ -9,7 +27,7 @@ var processor = {
         this.video = document.getElementById("video");
         this.mirrorVideo = document.getElementById("mirrorVideo");
         this.mirrorVideoCtx = this.mirrorVideo.getContext("2d");
-        this.twElement = document.getElementById("tweet");
+        this.twElement = document.getElementById("tracked");
         var self = this;
 
         // If the videos end, play again
@@ -78,14 +96,6 @@ var processor = {
         var shape1 = null;
 
         var r, g, b, x, y;
-
-        //Colors to detect
-
-        var cR = 240;
-        var cG = 92;
-        var cB = 160;
-        var cOffset = 40;
-        var sizeOffset = 200;
 
         var D = 20;
 

@@ -34,12 +34,12 @@
                             start: 3,
                             end: 9.5,
                             text: '<h1>Brett Gaylor</h1> Documentary filmmaker from Canada,<br/> <a href="http://popcornjs.org">http://popcornjs.org</a>',
-                            target: "tweet"
+                            target: "tracked"
                         }).footnote({
                             start: 9.5,
                             end: 12,
                             text: '<h1>Jigar Mehta</h1> Digital enterpreur from California,<br/> <a href="http://jigarmehta.com">http://jigarmehta.com/</a>',
-                            target: "tweet"
+                            target: "tracked"
                         });;
             });
         </script>
@@ -59,12 +59,14 @@
 
             <div id="videoBox">
                 <video id="video" width="960" height="540" src="video/brettandjigar.ogv" oncanplay="processor.videoIsReady()" autobuffer preload controls></video>
-                <div id="tweet"></div>
+                
+                <!-- this is the element that willfollow the color -->
+                <div id="tracked"></div>
 
             </div>
+
             <canvas id="mirrorVideo"></canvas>
 
-
-            <p class="fromm">Hacked from <a href="http://people.mozilla.com/~prouget/demos/DynamicContentInjection/play.xhtml">Dynamic Content Injection experiment by Paul Rouget</a></p>
+            <p class="fromm">Hacked by <a href="http://twitter.com/bertez">@bertez</a> from <a href="http://people.mozilla.com/~prouget/demos/DynamicContentInjection/play.xhtml">Dynamic Content Injection experiment by Paul Rouget</a></p>
         </body>
     </html>
