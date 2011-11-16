@@ -1,3 +1,7 @@
 This is just a test that was done in the 2011 #mozfest in London by "@bertez":http://twitter.com/bertez from "@anavallasuiza":http://twitter.com/anavallasuiza
 
+You can see a working demo here:
+"http://anavallasuiza.com/popcorn/":http://anavallasuiza.com/popcorn/ 
+
+
 Hacked from the awesome "Dynamic Content Injection experiment by Paul Rouget":http://people.mozilla.com/~prouget/demos/DynamicContentInjection/play.xhtml

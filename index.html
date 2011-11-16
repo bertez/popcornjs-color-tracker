@@ -50,15 +50,17 @@
         <body onload="processor.doLoad()">
 
             <header>
-            <hgroup>
-            <h1 class="image">Popcornjs color tracker</h1>
-            <p class="info">This demo uses canvas to detect and track the position of specific blocks of color on the video using Popcornjs to sync content</p>
-            </hgroup>
-
+                <hgroup>
+                    <h1 class="image">Popcornjs color tracker</h1>
+                    <p class="info">This demo uses canvas to detect and track the position of specific blocks of color on the video using Popcornjs to sync content</p>
+                </hgroup>
             </header>
 
             <div id="videoBox">
-                <video id="video" width="960" height="540" src="video/brettandjigar.ogv" oncanplay="processor.videoIsReady()" autobuffer preload controls></video>
+                <video id="video" width="960" height="540" oncanplay="processor.videoIsReady()" autobuffer preload controls>
+                	<source src="video/brettandjigar.ogv" type="video/ogg">
+                    <source src="video/brettandjigar.mp4" type="video/mp4">
+                </video>
                 
                 <!-- this is the element that willfollow the color -->
                 <div id="tracked"></div>
@@ -67,6 +69,8 @@
 
             <canvas id="mirrorVideo"></canvas>
 
-            <p class="fromm">Hacked by <a href="http://twitter.com/bertez">@bertez</a> from <a href="http://people.mozilla.com/~prouget/demos/DynamicContentInjection/play.xhtml">Dynamic Content Injection experiment by Paul Rouget</a></p>
+            <p class="fromm">
+                Hacked by <a href="http://twitter.com/bertez">@bertez</a> from <a href="http://people.mozilla.com/~prouget/demos/DynamicContentInjection/play.xhtml">Dynamic Content Injection experiment by Paul Rouget</a>
+            </p>
         </body>
     </html>
